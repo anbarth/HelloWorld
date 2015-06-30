@@ -4,10 +4,16 @@ import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 
 public class DisplayMessageActivity extends ActionBarActivity {
+
+    public void nextProb(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,10 +21,15 @@ public class DisplayMessageActivity extends ActionBarActivity {
         //Get the message
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        String returnMes = "";
         //Create the textView
-        TextView textView = new TextView(this);
+        if(message.equals(intent.getStringExtra(MainActivity.SUM_MESSAGE)))
+            returnMes = "The Analemma smiles upon you with its rays of infinity.";
+        else
+            returnMes = "Incorrect |-|-|";
+        TextView textView = (TextView) findViewById(R.id.return_mes);
         textView.setTextSize(40);
-        textView.setText(message);
+        textView.setText(returnMes);
         //Set the textView as the activity layout
         setContentView(textView);
     }

@@ -7,9 +7,12 @@ import android.view.MenuItem;
 import android.content.Intent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
     public final static String EXTRA_MESSAGE = "com.mbhs.analemma.helloworld.MESSAGE";
+    public final static String SUM_MESSAGE = "com.mbhs.analemma.helloworld.SUM";
+    private int sum;
     /**Called when the user presses the send button
      * The View is the view that was clicked (the button)
      **/
@@ -20,8 +23,9 @@ public class MainActivity extends ActionBarActivity {
         //So views are the components added to activities
         EditText editText = (EditText) findViewById(R.id.edit_message);
         String message = editText.getText().toString();
-        //putExtra sends information between activities (I'm not entirely sure what that means)
+        //putExtra sends information between activities
         intent.putExtra(EXTRA_MESSAGE, message);
+        intent.putExtra(SUM_MESSAGE, sum);
         //Finish the intent
         startActivity(intent);
     }
@@ -29,6 +33,11 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        TextView problem = (TextView) findViewById(R.id.problem_statement);
+        int num1 = (int)(Math.random()*144) + 1;
+        int num2 = (int)(Math.random()*100) + 1;
+        sum = num1 + num2;
+        problem.setText(num1 + " + " + num2 + " =");
         setContentView(R.layout.activity_main);
     }
 
