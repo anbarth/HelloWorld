@@ -16,6 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".DisplayMessageActivity"
+            android:label="@string/title_activity_display_message" >
+        </activity>
+        <activity
+            android:name=".ButtonDisplayMessageActivity"
+            android:label="@string/title_activity_button_display_message"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mbhs.analemma.helloworld.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

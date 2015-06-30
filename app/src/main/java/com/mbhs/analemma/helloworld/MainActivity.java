@@ -4,9 +4,27 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import android.content.Intent;
+import android.view.View;
+import android.widget.EditText;
 
 public class MainActivity extends ActionBarActivity {
+    public final static String EXTRA_MESSAGE = "com.mbhs.analemma.helloworld.MESSAGE";
+    /**Called when the user presses the send button
+     * The View is the view that was clicked (the button)
+     **/
+    public void sendMessage(View view){
+        //An intent represents an app's "intent to do something", usually start another activity
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        //Get the editText that is a view with the specified id
+        //So views are the components added to activities
+        EditText editText = (EditText) findViewById(R.id.edit_message);
+        String message = editText.getText().toString();
+        //putExtra sends information between activities (I'm not entirely sure what that means)
+        intent.putExtra(EXTRA_MESSAGE, message);
+        //Finish the intent
+        startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
