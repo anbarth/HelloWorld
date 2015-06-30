@@ -12,6 +12,7 @@
         android:layout_weight="1"
         android:hint="@string/edit_message" />
     <!--@+id/edit_message: Give it an id, + denotes making new id-->
+    <!--weight=1 makes the textbox span the entire width-->
 
     <!--Make a button with the message send-->
     <!--All @string stuff is inside res/values/strings-->
