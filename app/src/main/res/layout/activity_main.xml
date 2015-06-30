@@ -10,7 +10,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:hint="@string/edit_message" />
+        android:hint="@string/edit_message"
+        android:text="analemma presents..." />
     <!--@+id/edit_message: Give it an id, + denotes making new id-->
     <!--weight=1 makes the textbox span the entire width-->
 
@@ -19,9 +20,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_send"
+        android:text="the BEST BUTTON"
         android:onClick="sendMessage"
-        />
+        android:id="@+id/myButton" />
     <!--sendMessage is a void in mainActivity.java-->
 
 </LinearLayout>
