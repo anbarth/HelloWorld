@@ -8,4 +8,5 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_display_message">Analemessage</string>
     <string name="next_button">Next</string>
+    <string name="title_activity_give_problem">GiveProblemActivity</string>
 </resources>

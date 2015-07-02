@@ -20,10 +20,10 @@ public class DisplayMessageActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         //Get the message
         Intent intent = getIntent();
-        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        String message = intent.getStringExtra(GiveProblemActivity.EXTRA_MESSAGE);
         String returnMes = "";
         //Create the textView
-        if(message.equals(intent.getStringExtra(MainActivity.SUM_MESSAGE)))
+        if(message.equals(intent.getStringExtra(GiveProblemActivity.SUM_MESSAGE)))
             returnMes = "The Analemma smiles upon you with its rays of infinity.";
         else
             returnMes = "Incorrect |-|-|";
