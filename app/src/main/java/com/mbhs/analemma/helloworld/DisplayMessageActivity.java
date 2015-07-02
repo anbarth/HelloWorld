@@ -28,8 +28,8 @@ public class DisplayMessageActivity extends ActionBarActivity {
             returnMes = "The Analemma smiles upon you with its rays of infinity.";
         else{
             returnMes = "Incorrect |-|-|";
-            returnMes += "correct sum was "+"\""+intent.getStringExtra(GiveProblemActivity.SUM_MESSAGE)+"\"";
-            returnMes += " but your answer was "+"\""+message+"\"";
+            //returnMes += "correct sum was "+"\""+intent.getStringExtra(GiveProblemActivity.SUM_MESSAGE)+"\"";
+            //returnMes += " but your answer was "+"\""+message+"\"";
         }
         TextView textView = (TextView) findViewById(R.id.return_mes);
         textView.setTextSize(40);
