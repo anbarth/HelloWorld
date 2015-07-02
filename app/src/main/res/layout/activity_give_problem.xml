@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingLeft="8dp"
+    android:background="#FFFFEF"
+    android:orientation="horizontal">
+
+    <TextView android:id="@+id/problem_statement"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textSize="23dp"
+        android:textColor="#000000"
+        android:text="5 + 6 =" />
+
+    <!--Make a textbox for user input-->
+    <EditText android:id="@+id/edit_message"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:hint="@string/edit_message"
+        android:textSize="23dp"
+        android:layout_toRightOf="@id/problem_statement"
+        android:text="enter answer" />
+    <!--@+id/edit_message: Give it an id, + denotes making new id-->
+    <!--weight=1 makes the textbox span the entire width-->
+
+    <!--Make a button with the message send-->
+    <!--All @string stuff is inside res/values/strings-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="the BEST BUTTON"
+        android:onClick="sendMessage"
+        android:layout_below="@id/problem_statement"
+        android:id="@+id/myButton" />
+    <!--sendMessage is a void in mainActivity.java-->
+
+</RelativeLayout>

@@ -2,46 +2,21 @@ package com.mbhs.analemma.helloworld;
 
 import android.app.SearchManager;
 import android.provider.Settings;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.content.Intent;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
+
 
 public class MainActivity extends ActionBarActivity {
-    public final static String EXTRA_MESSAGE = "com.mbhs.analemma.helloworld.MESSAGE";
-    public final static String SUM_MESSAGE = "com.mbhs.analemma.helloworld.SUM";
-    private int sum;
-    /**Called when the user presses the send button
-     * The View is the view that was clicked (the button)
-     **/
-    public void sendMessage(View view){
-        //An intent represents an app's "intent to do something", usually start another activity
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
-        //Get the editText that is a view with the specified id
-        //So views are the components added to activities
-        EditText editText = (EditText) findViewById(R.id.edit_message);
-        String message = editText.getText().toString();
-        //putExtra sends information between activities
-        intent.putExtra(EXTRA_MESSAGE, message);
-        intent.putExtra(SUM_MESSAGE, sum);
-        //Finish the intent
-        startActivity(intent);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TextView problem = (TextView) findViewById(R.id.problem_statement);
-        int num1 = (int)(Math.random()*144) + 1;
-        int num2 = (int)(Math.random()*100) + 1;
-        sum = num1 + num2;
-        problem.setText(num1 + " + " + num2 + " =");
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_give_problem);
     }
 
     @Override
@@ -59,6 +34,14 @@ public class MainActivity extends ActionBarActivity {
     private void openSettings(){
         startActivity(new Intent(Settings.ACTION_SETTINGS));
     }
+
+    public void begin(View view){
+        //An intent represents an app's "intent to do something", usually start another activity
+        Intent intent = new Intent(this, GiveProblemActivity.class);
+        //Finish the intent
+        startActivity(intent);
+    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
