@@ -34,13 +34,13 @@ public class GiveProblemActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
         Log.d("HelloWorld", "~~~~~~~~~~I HAVE CREATED~~~~~~~~~~~");
         TextView problem = (TextView) findViewById(R.id.problem_statement);
         int num1 = (int)(Math.random()*144) + 1;
         int num2 = (int)(Math.random()*100) + 1;
         sum = num1 + num2;
         problem.setText(num1 + " + " + num2 + " =");
-        setContentView(R.layout.activity_main);
     }
 
     @Override

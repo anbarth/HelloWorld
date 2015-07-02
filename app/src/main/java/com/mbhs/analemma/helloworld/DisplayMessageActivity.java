@@ -18,6 +18,7 @@ public class DisplayMessageActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_display_message);
         //Get the message
         Intent intent = getIntent();
         String message = intent.getStringExtra(GiveProblemActivity.EXTRA_MESSAGE);
@@ -31,7 +32,7 @@ public class DisplayMessageActivity extends ActionBarActivity {
         textView.setTextSize(40);
         textView.setText(returnMes);
         //Set the textView as the activity layout
-        setContentView(R.layout.activity_display_message);
+
     }
 
     @Override
