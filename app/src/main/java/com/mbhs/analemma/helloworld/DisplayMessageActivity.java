@@ -26,8 +26,11 @@ public class DisplayMessageActivity extends ActionBarActivity {
         //Create the textView
         if(message.equals(intent.getStringExtra(GiveProblemActivity.SUM_MESSAGE)))
             returnMes = "The Analemma smiles upon you with its rays of infinity.";
-        else
+        else{
             returnMes = "Incorrect |-|-|";
+            returnMes += "correct sum was "+"\""+intent.getStringExtra(GiveProblemActivity.SUM_MESSAGE)+"\"";
+            returnMes += " but your answer was "+"\""+message+"\"";
+        }
         TextView textView = (TextView) findViewById(R.id.return_mes);
         textView.setTextSize(40);
         textView.setText(returnMes);

@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class GiveProblemActivity extends ActionBarActivity {
     public final static String EXTRA_MESSAGE = "com.mbhs.analemma.helloworld.MESSAGE";
     public final static String SUM_MESSAGE = "com.mbhs.analemma.helloworld.SUM";
-    private int sum;
+    private String sum = "the analemma is angry";
     /**Called when the user presses the send button
      * The View is the view that was clicked (the button)
      **/
@@ -39,7 +39,7 @@ public class GiveProblemActivity extends ActionBarActivity {
         TextView problem = (TextView) findViewById(R.id.problem_statement);
         int num1 = (int)(Math.random()*144) + 1;
         int num2 = (int)(Math.random()*100) + 1;
-        sum = num1 + num2;
+        sum = num1 + num2+"";
         problem.setText(num1 + " + " + num2 + " =");
     }
 
