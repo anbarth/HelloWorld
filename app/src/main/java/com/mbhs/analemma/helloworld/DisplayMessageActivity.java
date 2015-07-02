@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class DisplayMessageActivity extends ActionBarActivity {
 
     public void nextProb(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, GiveProblemActivity.class);
         startActivity(intent);
     }
 

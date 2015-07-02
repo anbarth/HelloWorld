@@ -34,7 +34,7 @@ public class GiveProblemActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_give_problem);
         Log.d("HelloWorld", "~~~~~~~~~~I HAVE CREATED~~~~~~~~~~~");
         TextView problem = (TextView) findViewById(R.id.problem_statement);
         int num1 = (int)(Math.random()*144) + 1;
