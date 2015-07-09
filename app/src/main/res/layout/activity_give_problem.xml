@@ -18,10 +18,9 @@
     <EditText android:id="@+id/edit_message"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:hint="@string/edit_message"
+        android:hint="enter answer"
         android:textSize="23dp"
-        android:layout_toRightOf="@id/problem_statement"
-        android:text="enter answer" />
+        android:layout_toRightOf="@id/problem_statement" />
     <!--@+id/edit_message: Give it an id, + denotes making new id-->
     <!--weight=1 makes the textbox span the entire width-->
 

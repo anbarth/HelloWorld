@@ -29,9 +29,9 @@ public class DisplayMessageActivity extends ActionBarActivity {
         if(message.equals(intent.getStringExtra(GiveProblemActivity.SUM_MESSAGE)))
             returnMes = "The Analemma smiles upon you with its rays of infinity.";
         else
-            returnMes = "Incorrect |-|-|";
+            returnMes = "Correct sum was " + intent.getStringExtra(GiveProblemActivity.SUM_MESSAGE) +
+                    " but your answer was " + message + ".";
 
-        //Set the textView as the activity layout
         TextView textView = (TextView) findViewById(R.id.return_mes);
         textView.setTextSize(40);
         textView.setText(returnMes);
