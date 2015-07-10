@@ -1,6 +1,11 @@
 package com.mbhs.analemma.helloworld;
 
 import android.app.SearchManager;
+import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.provider.Settings;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -9,6 +14,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Gallery;
+import android.widget.ImageView;
+import android.widget.LinearLayout.LayoutParams;
+
+import java.io.InputStream;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -17,6 +27,9 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
     }
 
     @Override
