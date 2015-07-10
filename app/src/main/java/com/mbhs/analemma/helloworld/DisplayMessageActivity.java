@@ -45,7 +45,8 @@ public class DisplayMessageActivity extends ActionBarActivity {
 
         //Animate--in theory, first one flips it and moves to the corner, second one moves it back
         textView.animate().x(xCorner).y(yCorner).rotationYBy(720);
-        textView.animate().x(0).y(0);
+        textView.animate().x(50).y(16);
+        //^^lame, experimentally found, hardcoded values ftw
     }
 
     @Override
